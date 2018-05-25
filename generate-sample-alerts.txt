@@ -1,0 +1,50 @@
+# generate samplefindings
+
+aws guardduty create-sample-findings \
+    --detector-id <your detector id goes here> \
+    --finding-types Trojan:EC2/BlackholeTraffic
+
+or any of the below can be used for --finding-types
+
+Backdoor:EC2/XORDDOS
+Backdoor:EC2/Spambot
+Backdoor:EC2/C&CActivity.B!DNS
+Behavior:EC2/NetworkPortUnusual
+Behavior:EC2/TrafficVolumeUnusual
+CryptoCurrency:EC2/BitcoinTool.B!DNS
+PenTest:IAMUser/KaliLinux
+Persistence:IAMUser/NetworkPermissions
+Persistence:IAMUser/ResourcePermissions
+Persistence:IAMUser/UserPermissions
+Recon:EC2/PortProbeUnprotectedPort
+Recon:IAMUser/TorIPCaller
+Recon:IAMUser/MaliciousIPCaller.Custom
+Recon:IAMUser/MaliciousIPCaller
+Recon:EC2/Portscan
+Recon:IAMUser/NetworkPermissions
+Recon:IAMUser/ResourcePermissions
+Recon:IAMUser/UserPermissions
+ResourceConsumption:IAMUser/ComputeResources
+Stealth:IAMUser/PasswordPolicyChange
+Stealth:IAMUser/CloudTrailLoggingDisabled
+Stealth:IAMUser/LoggingConfigurationModified
+Trojan:EC2/BlackholeTraffic
+Trojan:EC2/DropPoint
+Trojan:EC2/BlackholeTraffic!DNS
+Trojan:EC2/DriveBySourceTraffic!DNS
+Trojan:EC2/DropPoint!DNS
+Trojan:EC2/DGADomainRequest.B
+Trojan:EC2/DGADomainRequest.C!DNS
+Trojan:EC2/DNSDataExfiltration
+Trojan:EC2/PhishingDomainRequest!DNS
+UnauthorizedAccess:IAMUser/TorIPCaller
+UnauthorizedAccess:IAMUser/MaliciousIPCaller.Custom
+UnauthorizedAccess:IAMUser/ConsoleLoginSuccess.B
+UnauthorizedAccess:IAMUser/MaliciousIPCaller
+UnauthorizedAccess:IAMUser/UnusualASNCaller
+UnauthorizedAccess:EC2/TorIPCaller
+UnauthorizedAccess:EC2/MaliciousIPCaller.Custom
+UnauthorizedAccess:EC2/SSHBruteForce
+UnauthorizedAccess:EC2/RDPBruteForce
+UnauthorizedAccess:IAMUser/InstanceCredentialExfiltration
+UnauthorizedAccess:IAMUser/ConsoleLogin
